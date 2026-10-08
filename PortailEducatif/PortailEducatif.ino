@@ -24,31 +24,84 @@ const char PAGE_HTML[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atelier Wi-Fi educatif</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center;
-           padding: 20px; font-family: system-ui, Arial, sans-serif;
-           background: #081c30; color: #f0f9ff; }
-    main { max-width: 480px; padding: 30px; border-radius: 20px;
-           background: #15314b; border: 1px solid #34627e; }
-    .tag { color: #8cddff; font-weight: bold; font-size: .85rem; }
-    h1 { font-size: 1.7rem; line-height: 1.2; }
-    p { line-height: 1.6; }
-    small { color: #b9cedb; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Wi-Fi éducatif</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #030703;
+  color: #66ff99;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 35px 18px;
+  line-height: 1.7;
+}
+
+.line {
+  display: block;
+  width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing var(--time)
+             steps(var(--n), end)
+             var(--delay) both;
+}
+
+.line:nth-child(3),
+.line:nth-child(7) {
+  margin-top: 24px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--w);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    animation: none;
+    width: auto;
+    white-space: normal;
+  }
+}
+</style>
 </head>
+
 <body>
-  <main>
-    <div class="tag">ATELIER DE SENSIBILISATION</div>
-    <h1>Faut pas appuyer sur n'importe quoi...</h1>
-    <p>Vous êtes sur un réseau local de démonstration créé par un ESP32.
-       Cette page montre le fonctionnement d'un point d'accès,
-       d'un serveur DNS et d'un serveur HTTP.</p>
-    <small>Aucun identifiant demandé. Aucun accès Internet fourni.</small>
-  </main>
+
+<div class="line" style="--n:20;--w:20ch;--time:1s;--delay:.3s;">Faut pas appuyer sur</div>
+
+<div class="line" style="--n:15;--w:15ch;--time:.75s;--delay:1.3s;">n'importe quoi...</div>
+
+<div class="line" style="--n:28;--w:28ch;--time:1.4s;--delay:2.2s;">Vous êtes sur un faux réseau</div>
+
+<div class="line" style="--n:23;--w:23ch;--time:1.15s;--delay:3.6s;">Wi-Fi de démonstration.</div>
+
+<div class="line" style="--n:27;--w:27ch;--time:1.35s;--delay:4.8s;">Son apparence ne prouve pas</div>
+
+<div class="line" style="--n:17;--w:17ch;--time:.85s;--delay:6.2s;">qu'il est fiable.</div>
+
+<div class="line" style="--n:26;--w:26ch;--time:1.3s;--delay:7.2s;">Aucun identifiant demandé.</div>
+
+<div class="line" style="--n:28;--w:28ch;--time:1.4s;--delay:8.55s;">Aucun accès Internet fourni.</div>
+
 </body>
 </html>
 )rawliteral";
