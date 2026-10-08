@@ -76,14 +76,12 @@ Projet conçu pour des ateliers et essais **sur du matériel autorisé et avec d
 
 ---
  
-##  Auteur 
- 
-**sa0**  
- 
----
- 
 ##  Licence
  
 Ce projet est distribué sous licence **MIT**.  
 Voir le fichier [LICENSE](LICENSE) pour le détail.
+
+---
+
+> *sa0*
  
